@@ -1,11 +1,38 @@
-import { useRouter } from 'next/router';
+import { Button } from '@chakra-ui/react';
+import _ from 'lodash';
+import { useEffect, useState } from 'react';
 
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
-const Index = () => {
-  const router = useRouter();
+import questions from '../data.json';
 
+const Index = () => {
+  console.log(questions);
+
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [showScore, setShowScore] = useState(false);
+  const [showPause, setShowPause] = useState(-1);
+  const [score, setScore] = useState(0);
+  let questionKey = Object.keys(questions);
+  useEffect(() => {
+    questionKey = _.shuffle(Object.keys(questions));
+  }, []);
+  const handleNext = () => {
+    const nextQuestion = currentQuestion + 1;
+    setShowPause(-1);
+    if (nextQuestion < questionKey.length) {
+      setCurrentQuestion(nextQuestion);
+    } else {
+      setShowScore(true);
+    }
+  };
+  const handleAnswerOptionClick = (isCorrect: boolean, order: number) => {
+    setShowPause(order);
+    if (isCorrect) {
+      setScore(score + 1);
+    }
+  };
   return (
     <Main
       meta={
@@ -15,170 +42,72 @@ const Index = () => {
         />
       }
     >
-      <a href="https://github.com/ixartz/Next-js-Boilerplate">
-        <img
-          src={`${router.basePath}/assets/images/nextjs-starter-banner.png`}
-          alt="Nextjs starter banner"
-        />
-      </a>
-      <h1 className="text-2xl font-bold">
-        Boilerplate code for your Nextjs project with Tailwind CSS
-      </h1>
-      <p>
-        <span role="img" aria-label="rocket">
-          🚀
-        </span>{' '}
-        Next.js Boilerplate is a starter code for your Next js project by
-        putting developer experience first .{' '}
-        <span role="img" aria-label="zap">
-          ⚡️
-        </span>{' '}
-        Made with Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged,
-        VSCode, Netlify, PostCSS, Tailwind CSS.
-      </p>
-      <h2 className="text-lg font-semibold">Next js Boilerplate Features</h2>
-      <p>Developer experience first:</p>
-      <ul>
-        <li>
-          <span role="img" aria-label="fire">
-            🔥
-          </span>{' '}
-          <a href="https://nextjs.org" rel="nofollow">
-            Next.js
-          </a>{' '}
-          for Static Site Generator
-        </li>
-        <li>
-          <span role="img" aria-label="art">
-            🎨
-          </span>{' '}
-          Integrate with{' '}
-          <a href="https://tailwindcss.com" rel="nofollow">
-            Tailwind CSS
-          </a>
-        </li>
-        <li>
-          <span role="img" aria-label="nail_care">
-            💅
-          </span>{' '}
-          PostCSS for processing Tailwind CSS
-        </li>
-        <li>
-          <span role="img" aria-label="tada">
-            🎉
-          </span>{' '}
-          Type checking Typescript
-        </li>
-        <li>
-          <span role="img" aria-label="pencil2">
-            ✏️
-          </span>{' '}
-          Linter with{' '}
-          <a href="https://eslint.org" rel="nofollow">
-            ESLint
-          </a>
-        </li>
-        <li>
-          <span role="img" aria-label="hammer_and_wrench">
-            🛠
-          </span>{' '}
-          Code Formatter with{' '}
-          <a href="https://prettier.io" rel="nofollow">
-            Prettier
-          </a>
-        </li>
-        <li>
-          <span role="img" aria-label="fox_face">
-            🦊
-          </span>{' '}
-          Husky for Git Hooks
-        </li>
-        <li>
-          <span role="img" aria-label="no_entry_sign">
-            🚫
-          </span>{' '}
-          Lint-staged for running linters on Git staged files
-        </li>
-        <li>
-          <span role="img" aria-label="no_entry_sign">
-            🗂
-          </span>{' '}
-          VSCode configuration: Debug, Settings, Tasks and extension for
-          PostCSS, ESLint, Prettier, TypeScript
-        </li>
-        <li>
-          <span role="img" aria-label="robot">
-            🤖
-          </span>{' '}
-          SEO metadata, JSON-LD and Open Graph tags with Next SEO
-        </li>
-        <li>
-          <span role="img" aria-label="robot">
-            ⚙️
-          </span>{' '}
-          <a
-            href="https://www.npmjs.com/package/@next/bundle-analyzer"
-            rel="nofollow"
+      {showScore ? (
+        <div>
+          You scored {score} out of {questionKey.length}
+        </div>
+      ) : (
+        <>
+          <div>
+            You scored {score} out of {questionKey.length}
+          </div>
+          <button
+            className="m-3 w-full rounded bg-yellow-500 py-2 px-4 font-bold text-white hover:bg-yellow-700"
+            onClick={handleNext}
           >
-            Bundler Analyzer
-          </a>
-        </li>
-        <li>
-          <span role="img" aria-label="rainbow">
-            🌈
-          </span>{' '}
-          Include a FREE minimalist theme
-        </li>
-        <li>
-          <span role="img" aria-label="hundred">
-            💯
-          </span>{' '}
-          Maximize lighthouse score
-        </li>
-      </ul>
-      <p>Built-in feature from Next.js:</p>
-      <ul>
-        <li>
-          <span role="img" aria-label="coffee">
-            ☕
-          </span>{' '}
-          Minify HTML &amp; CSS
-        </li>
-        <li>
-          <span role="img" aria-label="dash">
-            💨
-          </span>{' '}
-          Live reload
-        </li>
-        <li>
-          <span role="img" aria-label="white_check_mark">
-            ✅
-          </span>{' '}
-          Cache busting
-        </li>
-      </ul>
-      <h2 className="text-lg font-semibold">Our Stater code Philosophy</h2>
-      <ul>
-        <li>Minimal code</li>
-        <li>SEO-friendly</li>
-        <li>
-          <span role="img" aria-label="rocket">
-            🚀
-          </span>{' '}
-          Production-ready
-        </li>
-      </ul>
-      <p>
-        Check our GitHub project for more information about{' '}
-        <a href="https://github.com/ixartz/Next-js-Boilerplate">
-          Nextjs Boilerplate
-        </a>
-        . You can also browse our{' '}
-        <a href="https://creativedesignsguru.com/category/nextjs/">
-          Premium NextJS Templates
-        </a>{' '}
-        on our website to support this project.
-      </p>
+            Next
+          </button>
+          <div>
+            <div className="m-3 font-bold">
+              <span>Pertanyaan {currentQuestion + 1}/</span>
+              {questionKey.length}
+            </div>
+            <div className="mx-3">{questionKey[currentQuestion]}</div>
+          </div>
+          {showPause === -1 ? (
+            <div className="flex flex-col">
+              {questions[questionKey[currentQuestion]].map((answerOption) => (
+                <Button
+                  key={answerOption}
+                  height="80px"
+                  colorScheme="blue"
+                  className="m-3"
+                  style={{
+                    whiteSpace: 'normal',
+                    wordWrap: 'break-word',
+                  }}
+                  onClick={() =>
+                    handleAnswerOptionClick(answerOption[1], currentQuestion)
+                  }
+                >
+                  {answerOption[0]}
+                </Button>
+              ))}
+            </div>
+          ) : (
+            <div className="flex flex-col">
+              {questions[questionKey[currentQuestion]].map((answerOption) => (
+                <Button
+                  key={answerOption}
+                  height="80px"
+                  colorScheme={answerOption[1] ? 'green' : 'red'}
+                  className="m-3"
+                  disabled
+                  style={{
+                    whiteSpace: 'normal',
+                    wordWrap: 'break-word',
+                  }}
+                  onClick={() =>
+                    handleAnswerOptionClick(answerOption[1], currentQuestion)
+                  }
+                >
+                  {answerOption[0]}
+                </Button>
+              ))}
+            </div>
+          )}
+        </>
+      )}
     </Main>
   );
 };

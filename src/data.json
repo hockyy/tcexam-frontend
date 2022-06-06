@@ -1,0 +1,458 @@
+{
+    "Manakan pernyataan yang benar di bawah ini terkait hubungan antara Service Monitoring (SM), Application Monitoring (AM), dan Node Local Monitor (LM) ?": [
+        [
+            "Local Monitor tidak dapat bekerja apabila Service Monitor dalam keadaan mati",
+            false
+        ],
+        [
+            "Apabila Application Monitoring (AM) tidak melaporkan kegiatan ke Local Monitoring (LM), maka Service Monitoring akan mati",
+            false
+        ],
+        [
+            "Antar Local Monitoring dapat berkomunikasi melalui Application Monitoring untuk menentukan kesehatan layanan",
+            false
+        ],
+        [
+            "Local Monitoring bekerja di dalam lingkup sebuah sistem operasi yang terdiri dari jumlah nol hingga beberapa aplikasi yang dimonitor (AM)",
+            true
+        ]
+    ],
+    "Apa yang dimaksud dengan Error Rates dalam hal performance testing?": [
+        [
+            "Perbandingan antara jumlah kesalahan dengan jumlah semua permintaan yang dibuat selama dilakukan pengujian",
+            true
+        ],
+        [
+            "Perbandingan kerusakan data yang dikirimkan dengan total data yang dikirimkan",
+            false
+        ],
+        [
+            "Perbandingan antara banyaknya error pada browser ketika pemanggilan ke webserver",
+            false
+        ],
+        [
+            "Perbandingan antara banyaknya pesan error yang dihasilkan dengan banyaknya pesan yang sukses",
+            false
+        ],
+        [
+            "Perbandingan antara pesan sukses dengan total request yang dibuat",
+            false
+        ]
+    ],
+    "Berikut ini adalah pernyataan pentingnya para \"tester\" untuk mengetahui proses deployment. Kecuali": [
+        [
+            "Banyak masalah dapat dihindari jika penguji men-deploy sendiri code yang sudah dites",
+            true
+        ],
+        [
+            "Tugas utama tester dalam pelaksanaan pengujian bergantung pada seberapa sukses deploymentnya. Jika tim deployment menghadapi tantangan dan mengalami beberapa masalah dan tidak dapat menerapkan kode dengan benar, hal tersebut pasti akan menjadi indikator bahwa tim tester memiliki banyak bug yang harus diselesaikan.",
+            false
+        ],
+        [
+            "tim tester akan mendapatkan ide jika masalahnya benar-benar bug fungsionalitas atau sesuatu yang disebabkan karena proses deployment yang keliru",
+            false
+        ],
+        [
+            "Jika tester mengetahui proses deployment, mereka akan memahami pentingnya menyelesaikan tugas mereka dalam kerangka waktu yang direncanakan.",
+            false
+        ]
+    ],
+    "Apa yang dimaksud dengan Long-Polling?": [
+        [
+            "Proses yang dilakukan oleh HTTP Client dalam melakukan pemanggilan berulang-ulang kepada HTTP Server",
+            false
+        ],
+        [
+            "Proses yang dilakukan oleh HTTP Server dalam pengembalian resource dengan jumlah yang banyak dan durasi waktu yang panjang",
+            false
+        ],
+        [
+            "Proses yang dilakukan oleh HTTP Client dalam melakukan pemanggilan berulang-ulang kepada HTTP Server dengan interval waktu random",
+            false
+        ],
+        [
+            "Proses yang dilakukan oleh HTTP Server dalam menunda pengembalian HTTP Response kepada Client",
+            true
+        ],
+        [
+            "Proses yang dilakukan oleh HTTP Client dalam melakukan pemanggilan secara normal dengan cara refresh browser berulang-ulang",
+            false
+        ]
+    ],
+    "Manakah pernyataan yang benar berikut ini mengenai Service Choreography?": [
+        [
+            "Service Choreography adalah sekumpulan layanan yang saling berpartisipasi dengan menggunakan pendekatan sentralisasi untuk komposisi layanan",
+            false
+        ],
+        [
+            "Semua partisipan di dalam sebuah Service Choreography perlu mengetahui proses bisnis dan tujuan utama dari keseluruhan operasi yang terdiri dari fungsi untuk dieksekusi, pesan untuk dipertukarkan, dan waktu pertukaran pesan",
+            true
+        ],
+        [
+            "Web services yang menjadi komponen Service Orchestration tidak saling mengetahui keberadaan satu sama lain.",
+            false
+        ],
+        [
+            "Service Choreography membutuhkan peran sebuah choreographer ketika layanan sedang berlangsung.",
+            false
+        ]
+    ],
+    "Bagaimana caranya agar TURN server dapat diproteksi dari pengguna yang tidak punya hak untuk mengakses?": [
+        [
+            "Otorisasi TURN Server harus melewati proxy, sehingga WebRTC dapat langsung menggunakan layanan ini tanpa khawatir masalah security",
+            false
+        ],
+        [
+            "TURN Server melakukan otentikasi menggunakan OAuth untuk mengidentifikasi pengguna TURN Server",
+            false
+        ],
+        [
+            "Mengirimkan data menggunakan HTTPS agar username & password tidak dapat disadap",
+            false
+        ],
+        [
+            "TURN server tidak memiliki mekanisme security, sehingga developer harus menangani pada level aplikasi atau",
+            true
+        ]
+    ],
+    "Manakah pernyataan yang salah mengenai Service Monitoring di bawah ini?": [
+        [
+            "Application Monitoring adalah sebuah modul tertanam di dalam sebuah aplikasi untuk mengambil informasi terkait layanan yang disediakan",
+            false
+        ],
+        [
+            "Application Monitoring dapat berkomunikasi langsung dengan Application Monitoring lain",
+            true
+        ],
+        [
+            "Application monitoring (AM) dipergunakan untuk untuk melakukan pemantauan aktivitas yang spesifik atas sebuah aplikasi",
+            false
+        ],
+        [
+            "Organisasi TI yang dilengkapi dengan alat monitoring secara otomatis akan memiliki mekanisme feedback atas implementasi/perubahan yang telah dilakukan sebelumnya",
+            false
+        ]
+    ],
+    "Mengapa kita perlu menerapkan Timeout pada pemanggilan webservice?": [
+        [
+            "Untuk menghindari banyaknya request yang menumpuk menyebabkan bandwidth jaringan dihabiskan oleh request yang menumpuk",
+            false
+        ],
+        [
+            "Karena kita tidak bisa memastikan sebuah webservice dapat selau memberikan response yang selalu sama untuk semua request yang kita kirimkan.",
+            true
+        ],
+        [
+            "Karena kita perlu memberikan ruang yang cukup bagi prosesor dan RAM untuk bisa memproses sebuah request hingga selesai",
+            false
+        ],
+        [
+            "Untuk mengurangi kemungkinan adanya kegagalan webservice ketika terjadi listrik mati",
+            false
+        ]
+    ],
+    "Berikut pernyataan yang berkaitan dengan Service Choreography, kecuali": [
+        [
+            "mengzinkan setiap microservices untuk bekerja secara independen",
+            false
+        ],
+        [
+            "mengikat segala aktivitas dan tidak mengizinkan improvisasi",
+            true
+        ],
+        [
+            "setiap service memiliki pengetahuan dan mekanisme isyarat satu sama lain untuk menghandle suatu peristiwa tertentu",
+            false
+        ],
+        [
+            "koreografi memberikan keseimbangan terbaik antara independensi microservices sambil memberikan interaksi tanpa batas di antara mereka",
+            false
+        ]
+    ],
+    "Berikut ini adalah kita-kiat yang dapat diterapkan untuk menghindari kegagalan dalam penyelenggaraan suatu webservice, kecuali ...": [
+        [
+            "Menerapkan pemutus alur message untuk menghindari pengiriman ke webservice yang sudah diketahui tidak dapat melayani dengan baik",
+            false
+        ],
+        [
+            "Menerapkan sekring listrik untuk memberikan kepastian bahwa layanan tidak akan mati ketika dipanggil banyak pengguna pada suatu waktu yang sama",
+            true
+        ],
+        [
+            "Menerapkan timeout untuk menghindari terjadinya kondisi sistem memberikan response yang tidak diinginkan/tidak terprediksi sebelumnya",
+            false
+        ],
+        [
+            "Mengimplementasi modul-modul secara terpisah-pisah untuk menghindari kegagalan akibat dari kerusakan pada host aplikasi webservice",
+            false
+        ]
+    ],
+    "Manakah pernyataan yang benar berikut ini mengenai Service Orchestration?": [
+        [
+            "Orkestrator bertanggung jawab dalam memproses dan menghasilkan output atas sebuah layanan",
+            false
+        ],
+        [
+            "Tidak memiliki koordinator",
+            false
+        ],
+        [
+            "Orkestrasi layanan merupakan proses bisnis tunggal yang dapat dieksekusi terpusat oleh sebuah orkestrator yang mengoordinasikan interaksi beberapa layanan.",
+            true
+        ],
+        [
+            "Webservice yang terlibat sebagai salah satu komponen orkestrasi harus mengetahui status webservice / komponen lain guna untuk menjalankan proses secara sempurna.",
+            false
+        ]
+    ],
+    "Berikut adalah pernyataan yang berhubungan dengan masalah yang mungkin terjadi di penerapan service choreography, kecuali": [
+        [
+            "Semua pihak perlu mengetahui berapa banyak alur kerja yang gagal dan apa alasan di balik kegagalan",
+            false
+        ],
+        [
+            "Scaling out sulit diterapkan karena berhubungan dengan service independen",
+            true
+        ],
+        [
+            "Kurangnya visibilitas di seluruh alur kerja sehingga setiap pihak perlu mengetahui contoh alur kerja pihak yang lain di antara mereka",
+            false
+        ],
+        [
+            "Kesalahan \"ambigu\" terjadi jika satu microservices telah menerbitkan suatu event sedangkan event tersebut tidak ada microservices lain dapat memprosesnya, pesan akan hilang dan tidak ada yang menghandle",
+            false
+        ]
+    ],
+    "Apa yang dimaksud dengan Public Cloud?": [
+        [
+            "Layanan IT yang tidak dapat ditemukan lokasi server fisiknya",
+            false
+        ],
+        [
+            "Rangkaian server yang dapat diakses menggunakan komputer pada jaringan publik",
+            false
+        ],
+        [
+            "Rangkaian server yang dapat disewa secara terbuka yang dapat diakses melalui internet",
+            true
+        ],
+        [
+            "Rangkian server yang terletak di suatu data center tertentu",
+            false
+        ]
+    ],
+    "Manakah pernyataan yang salah mengenai Google Protobuf di bawah ini?": [
+        [
+            "Output dari protoc adalah satu atau beberapa template kode yang dapat digunakan / diimplementasikan oleh programmer.",
+            false
+        ],
+        [
+            "Protocol Buffer hanya dapat menggunakan tipe data primitif",
+            false
+        ],
+        [
+            "Spesifikasi pesan terdapat dalam file .proto",
+            false
+        ],
+        [
+            "Sebuah berkas .proto hanya boleh terdiri dari satu message type.",
+            true
+        ]
+    ],
+    "Manakah pernyataan yang salah mengenai gRPC di bawah ini?": [
+        [
+            "gRPC menggunakan Protokol Buffer dan ukuran payloadnya selalu lebih kecil dari JSON reguler. Hal ini dapat menghemat pemanfaatan bandwidth jaringan.",
+            false
+        ],
+        [
+            "Definisi Protokol Buffer memungkinkan terjadinya perkembangan & evolusi sebuah API tanpa merusak layanan yang sudah berjalan. Hal ini sangat bermanfaat dalam penerapan microservices.",
+            false
+        ],
+        [
+            "Komunikasi menggunakan gRPC dapat terjadi lebih cepat dan efisien, serta lebih ramah terhadap perangkat seluler yang memiliki sumber daya terbatas. Hal ini terjadi karena payload yang dikirimkan merupakan text dengan jumlah yang sangat sedikit.",
+            true
+        ],
+        [
+            "Service gRPC secara default bekerja secara asynchronous. Dengan demikian setiap service gRPC dapat melayani permintaan secara paralel",
+            false
+        ]
+    ],
+    "Apa yang dimaksud dengan Endurance Testing?": [
+        [
+            "Ujicoba untuk membuktikan apakah service yang kita buat dapat berfungsi normal ketika diberikan beban yang berat",
+            false
+        ],
+        [
+            "Ujicoba untuk membuktikan apakah service yang kita buat dapat berfungsi normal dalam durasi waktu yang panjang",
+            true
+        ],
+        [
+            "Ujicoba untuk membuktikan apakah service yang kita buat dapat berfungsi normal ketika terjadi kesalahan pada komponen hardware",
+            false
+        ],
+        [
+            "Ujicoba untuk membuktikan apakah service yang kita buat dapat berfungsi normal ketika diberikan variasi argumen yang banyak",
+            false
+        ],
+        [
+            "Ujicoba untuk membuktikan apakah service yang kita buat dapat berfungsi normal ketika diberikan data yang sedikit",
+            false
+        ]
+    ],
+    "Pada \"Transact Pattern\" menurut Robertson dan Sribar, manakah pernyataan yang benar?": [
+        [
+            "Komunikasi dapat berjalan secara asynchronous.",
+            false
+        ],
+        [
+            "Data yang dipertukarkan tidak terstruktur atau kompleks.",
+            false
+        ],
+        [
+            "DBMS adalah komponen standard-nya. Mempersyaratkan ACID: Atomic, Consistent, Isolated, dan Distribution",
+            false
+        ],
+        [
+            "Melibatkan pencatatan data baik secara remote maupun secara lokal.",
+            true
+        ]
+    ],
+    "Pada 9 pattern menurut Robertson & Sribar, layanan Webinar video streaming (webcast) adalah sesuai dengan pattern?": [
+        [
+            "Publish Pattern - Stream Publish",
+            true
+        ],
+        [
+            "Publish Pattern - Web Publish",
+            false
+        ],
+        [
+            "Transact Pattern - 3/N Tier Transact",
+            false
+        ],
+        [
+            "Collaborate Pattern - Real-time Collaborate",
+            false
+        ]
+    ],
+    "Manakah pernyataan yang benar mengenai Google Pub-Sub di bawah ini?": [
+        [
+            "Protokol Google Pub/Sub menggunakan spesifikasi yang sama seperti protokol AMQP yang dilayani oleh RabbitMQ",
+            false
+        ],
+        [
+            "Aplikasi Publisher membuat topik di dalam layanan Pub/Sub, kemudian mengirim pesan/message ke topik tersebut.  Isi dari sebuah pesan/message yang dikirimkan harus berisi berkas dan nama topik yang ingin dituju",
+            true
+        ],
+        [
+            "Google Pub/Sub menyediakan layanan perantara dan pengiriman pesan secara real-time. Karena bersifat open source, maka server Pub/Sub dapat diakses di seluruh dunia.",
+            false
+        ],
+        [
+            "Aplikasi Subscriber menerima pesan/message dari server dengan cara server Pub/Sub secara aktif melakukan \"push\" message ke URL endpoint Subscriber, atau oleh Subscriber melakukan \"pull\" message dari server Pub/Sub.",
+            false
+        ]
+    ],
+    "Berikut ini adalah kerugian dalam menggunakan HTML5": [
+        [
+            "Aplikasi web dapat menghabiskan bandwidth & quota internet",
+            false
+        ],
+        [
+            "Aplikasi web tidak dapat dijalankan pada sejumlah browser dengan versi tertentu",
+            true
+        ],
+        [
+            "Aplikasi web sering crash",
+            false
+        ],
+        [
+            "Aplikasi web mudah di-hack",
+            false
+        ],
+        [
+            "Aplikasi web tidak menarik",
+            false
+        ]
+    ],
+    "Apa yang dimaksud dengan mekanisme Cache?": [
+        [
+            "Cache merupakan sistem kerja penyimpanan & pengambilan data menggunakan suatu algoritma tertentu agar terkompresi dan tersimpan secara efisien",
+            false
+        ],
+        [
+            "Cache adalah mekanisme pelayanan data secara rahasia dengan menyembunyikan sumber data berasal dari webservice apa",
+            false
+        ],
+        [
+            "Cache adalah mekanisme penyimpanan dan pengambilan data pada/dari tempat penyimpanan sementara yang memiliki kecepatan baca/tulis yang tinggi, baik secara langsung maupun tidak langsung.",
+            true
+        ],
+        [
+            "Cache adalah pelayanan penyimpanan data secara permanen yang nantinya dapat dipergunakan untuk mempercepat transaksi",
+            false
+        ]
+    ],
+    "Apa yand dimaksud dengan Message Broker?": [
+        [
+            "Sebuah layanan yang berfungsi untuk menyaring data",
+            false
+        ],
+        [
+            "Sebuah layanan yang berfungsi untuk memperbanyak dan menduplikasi data sebelum dikirimkan ke service lain",
+            false
+        ],
+        [
+            "Sebuah layanan yang berfungsi sebagai perantara pesan dari suatu standard tertentu (dari pengirim) yang diterjemahkan ke standard lain (yang dipahami oleh penerima)",
+            true
+        ],
+        [
+            "Sebuah layanan yang berfungsi untuk menunda dan menyimpan pesan yang dikirimkan",
+            false
+        ],
+        [
+            "Sebuah layanan yang berfungsi untuk mempercepat proses pengiriman pesan",
+            false
+        ]
+    ],
+    "Ketika sebuah webservice tidak berfungsi secara normal (cth: timeout, ada error di DB, dll), maka akan dihasilkan error di server. Dari beberapa pernyataan berikut ini, manakan pernyataan yang benar terkait dengan error di server?": [
+        [
+            "Untuk mengurangi kesalahan response webservice diperlukan mekanisme pemeriksaan header dan payload sebelum sebuah server mengirimkan jawabannya.",
+            false
+        ],
+        [
+            "Error pada aplikasi server yang dihasilkan pada standard error tidak akan merusak keseluruhan fungsi yang dipanggil.",
+            false
+        ],
+        [
+            "Jika tidak dihandle dengan baik, error yang dihasilkan pada standard output dapat menyebabkan response webservice tersebut tidak dapat dipahami oleh penerima response webservice",
+            true
+        ],
+        [
+            "Ketika terjadi error pada webservice, maka HTTP Response harus diset menjadi HTTP 500",
+            false
+        ]
+    ],
+    "Apa yang dimaksud dengan Database Queues?": [
+        [
+            "Semuanya salah",
+            false
+        ],
+        [
+            "Antrian proses ketika query database karena menunggu alokasi CPU",
+            false
+        ],
+        [
+            "Proses mengakses Database menggunakan mekanisme antrian",
+            false
+        ],
+        [
+            "Antrian proses insert data ke dalam Database",
+            false
+        ],
+        [
+            "Antrian proses yang mekanisme kerjanya dilakukan dengan cara menitipkan payload/argumen ke dalam database yang akan diproses pada waktu tertentu",
+            true
+        ]
+    ]
+}
